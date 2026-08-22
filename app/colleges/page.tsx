@@ -61,7 +61,7 @@ export default async function CollegesPage({
       });
 
       savedCollegeIds = saved.map(
-        (item) => item.collegeId
+        (item: { collegeId: string }) => item.collegeId
       );
     } catch {
       // invalid token -> ignore

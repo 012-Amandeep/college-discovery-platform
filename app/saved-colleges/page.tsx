@@ -43,7 +43,7 @@ export default async function SavedCollegesPage() {
         <p>No saved colleges yet.</p>
       ) : (
         <div className="grid gap-4">
-          {savedColleges.map((item) => (
+          {savedColleges.map((item: any) => (
             <div
               key={item.id}
               className="border rounded-lg p-4 shadow"
