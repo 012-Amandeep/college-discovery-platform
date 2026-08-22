@@ -17,6 +17,15 @@ export default async function CollegesPage({
   const search = params.search || "";
 
   const colleges = await prisma.college.findMany({
+    select: {
+      id: true,
+      name: true,
+      location: true,
+      fees: true,
+      rating: true,
+      overview: true,
+      imageUrl: true,
+    },
     where: {
       name: {
         contains: search,
